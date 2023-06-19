@@ -1,20 +1,18 @@
-.conteiner{
-  //background-color: blue;
+.conteiner {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
 
-.conteiner_form{
-  background-color: rgb(255, 106, 0);
+.conteiner_form {
   display: flex;
 
-  &_input{
-    font-family: 'IBM Plex Sans', serif;
+  &_input {
+    font-family: "IBM Plex Sans", serif;
     font-size: 36px;
     color: rgb(255, 255, 255);
-    background: #473151ce;
+    background-color: #25273c;
     width: 550px;
     padding: 8px 82px 11px 32px;
     border-radius: 30px 0px 0px 30px;
@@ -24,23 +22,31 @@
     }
   }
 
-  &_button{
+  &_button {
     border-radius: 0px 30px 30px 0px;
     background: rgb(67, 213, 30);
     width: 111px;
-
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
   }
 }
 
-.conteiner_checkbox{
-  background: #473151ce;
+.button-svg {
+  position: absolute;
+  top: 24px;
+}
+
+.conteiner_checkbox {
+  background-color: #25273c;
   padding: 20px;
   display: flex;
   justify-content: start;
   gap: 26px;
 
-  &_text{
-    font-family: 'IBM Plex Sans', serif;
+  &_text {
+    font-family: "IBM Plex Sans", serif;
     font-size: 36px;
     color: rgba(255, 255, 255);
     width: 100%;
@@ -49,7 +55,7 @@
 
 .conteiner_checkbox_check {
   -webkit-appearance: none;
-  background-color: #473151ce;
+  background-color: #25273c;
   border: 2px solid rgba(191, 86, 255, 0.79);
   width: 44px;
   height: 40px;
@@ -65,7 +71,7 @@
     position: absolute;
     z-index: 0;
     color: #fbfdfb;
-    display: none; 
+    display: none;
   }
 
   &:checked {
@@ -77,16 +83,20 @@
 }
 
 .conteiner_checkbox_check:checked {
-  background: linear-gradient(111.35deg, #E600FA 10.12%, rgba(82, 97, 234, 0) 82.22%);
+  background: linear-gradient(
+    111.35deg,
+    #e600fa 10.12%,
+    rgba(82, 97, 234, 0) 82.22%
+  );
   width: 44px;
   height: 40px;
-  
+
   &:after {
-    display: block; 
+    display: block;
   }
 }
 
-.note-box{
+.note-box {
   display: flex;
   flex-direction: column;
   gap: 52px;

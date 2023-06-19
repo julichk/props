@@ -1,3 +1,3 @@
-import Total from "./Form";
+import Total from "./Total";
 
 export default Total;
