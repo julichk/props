@@ -1,18 +1,24 @@
-import classNames from "classnames"; 
+import classNames from "classnames";
 
-
-const totalClassName = classNames(className);
-
-function Total({className}){
+function Total({ checkboxes, className }) {
+  const totalClassName = classNames(className);
 
   const renderCounterText = () => {
-    console.log("froggy")
-  } 
-  return(
+    const itemCount = checkboxes.length;
+    if (itemCount === 0) {
+      return <p>There is no item yet</p>;
+    } else if (itemCount === 1) {
+      return <p>{itemCount} Item</p>;
+    } else {
+      return <p>{itemCount} Items</p>;
+    }
+  };
+
+  return (
     <div>
-    <p className={`${totalClassName}`}>{renderCounterText()}</p>
+      <p className={`${totalClassName}`}>{renderCounterText()}</p>
     </div>
-  )
-};
+  );
+}
 
 export default Total;
